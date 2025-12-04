@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Notes | Batuhan Yılmaz</title>
+    <meta name="description"
+        content="Visual compendium of neural network architectures and mathematical foundations - hand-annotated algorithm visualizations.">
+    <meta name="author" content="Batuhan Yılmaz">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Progress indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <span class="logo-icon">∇</span>
+                    <span class="logo-text">DL Notes</span>
+                </div>
+                <nav class="nav-links">
+                    <a href="https://github.com/bathn456" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/batuhan-yilmaz" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:contact@batuhanyilmaz.com"><i class="fas fa-envelope"></i></a>
+                </nav>
+            </div>
+
+            <div class="hero">
+                <h1 class="hero-title">Deep Learning Notes</h1>
+                <p class="hero-subtitle">Visual Compendium of Neural Network Architectures & Mathematical Foundations
+                </p>
+                <p class="hero-author">by <strong>Batuhan Yılmaz</strong></p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="algorithm-count">9</span>
+                        <span class="stat-label">Algorithms</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">∞</span>
+                        <span class="stat-label">Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search & Filter -->
+            <div class="search-section">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search algorithms, equations, or concepts...">
+                </div>
+                <div class="filter-tags" id="filter-tags">
+                    <button class="filter-tag active" data-filter="all">All</button>
+                    <button class="filter-tag" data-filter="Computer Vision">Vision</button>
+                    <button class="filter-tag" data-filter="Transformers">Transformers</button>
+                    <button class="filter-tag" data-filter="Optimization">Optimization</button>
+                </div>
+            </div>
+
+            <!-- Algorithm Grid -->
+            <div class="algorithm-grid" id="algorithm-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" alt="Algorithm visualization">
+            <div class="lightbox-info">
+                <h2 id="lightbox-title"></h2>
+                <div class="lightbox-equation" id="lightbox-equation"></div>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Batuhan Yılmaz. Hand-annotated with <span class="heart">♥</span></p>
+                <p class="footer-note">Inspired by Distill.pub's approach to scientific communication</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
