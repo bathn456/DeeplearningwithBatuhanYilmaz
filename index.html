@@ -16,13 +16,28 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Firebase Analytics -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyACfXWnBzEcTtneb3xmCnS9Fn2XBaaBtzM",
+            authDomain: "deeplearningwithbatuhanyilmaz.firebaseapp.com",
+            projectId: "deeplearningwithbatuhanyilmaz",
+            storageBucket: "deeplearningwithbatuhanyilmaz.firebasestorage.app",
+            messagingSenderId: "756541953390",
+            appId: "1:756541953390:web:c5c058bb89c3009f565d7f",
+            measurementId: "G-YXH4MW6CBR"
+        };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </head>
 
 <body>
-    <!-- Progress indicator -->
     <div class="scroll-progress"></div>
 
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-top">
@@ -36,13 +51,11 @@
                     <a href="mailto:contact@batuhanyilmaz.com"><i class="fas fa-envelope"></i></a>
                 </nav>
             </div>
-
             <div class="hero">
                 <h1 class="hero-title">Deep Learning Notes</h1>
                 <p class="hero-subtitle">Visual Compendium of Neural Network Architectures & Mathematical Foundations
                 </p>
                 <p class="hero-author">by <strong>Batuhan Yılmaz</strong></p>
-
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-value" id="algorithm-count">9</span>
@@ -61,10 +74,8 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
         <div class="container">
-            <!-- Search & Filter -->
             <div class="search-section">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
@@ -77,15 +88,10 @@
                     <button class="filter-tag" data-filter="Optimization">Optimization</button>
                 </div>
             </div>
-
-            <!-- Algorithm Grid -->
-            <div class="algorithm-grid" id="algorithm-grid">
-                <!-- Cards injected by JS -->
-            </div>
+            <div class="algorithm-grid" id="algorithm-grid"></div>
         </div>
     </main>
 
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <button class="lightbox-close">&times;</button>
         <div class="lightbox-content">
@@ -98,7 +104,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
